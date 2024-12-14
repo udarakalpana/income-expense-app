@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router";
 
 const TransactionManagementButton = () => {
     return (
@@ -14,6 +15,17 @@ const TransactionManagementButton = () => {
                 </svg>
                 <span className="flex-1 ms-3 whitespace-nowrap">Transaction Management</span>
             </a>
+
+            <ul className='py-2 space-y-4'>
+                <li className='ml-12'>
+                    <Link to='/add-income'>Add Income</Link>
+                </li>
+                <li className='ml-12'>
+                    <Link to='/add-expense'>Add Expense</Link>
+                </li>
+                <li className='ml-12'>Add Category</li>
+            </ul>
+
         </li>
     );
 };
