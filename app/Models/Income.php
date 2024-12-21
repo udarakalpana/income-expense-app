@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Income extends Model
 {
@@ -13,6 +13,6 @@ class Income extends Model
 
     protected $fillable = [
         'income_amount',
-        'income_category'
+        'income_category',
     ];
 }

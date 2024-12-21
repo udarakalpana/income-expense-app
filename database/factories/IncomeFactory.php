@@ -17,7 +17,7 @@ class IncomeFactory extends Factory
     public function definition(): array
     {
         return [
-            'income_amount' => $this->faker->randomFloat(2,10000,100000),
+            'income_amount' => $this->faker->randomFloat(2, 10000, 100000),
             'income_category' => $this->faker->randomElement(['Salary', 'Side Project', 'YouTube Revenue']),
         ];
     }
