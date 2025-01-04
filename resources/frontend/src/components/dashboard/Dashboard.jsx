@@ -1,7 +1,7 @@
 import React from 'react';
 import MainDashboard from "./ dashboardComponents/MainDashboard.jsx";
 import {Route, Routes} from "react-router";
-import AddIncome from "./ dashboardComponents/transactionManagement/AddIncome.jsx";
+import AddIncome from "./ dashboardComponents/transactionManagement/income/AddIncome.jsx";
 import AddExpense from "./ dashboardComponents/transactionManagement/AddExpense.jsx";
 
 const Dashboard = () => {
