@@ -1,11 +1,14 @@
+import SideBar from "./components/common/sidebar/SideBar.jsx";
+import Dashboard from "./components/dashboard/Dashboard.jsx";
+
 const App = () => {
 
 
   return (
       <>
-          <h1 className="text-3xl font-bold underline">
-              Hello world!
-          </h1>
+
+          <SideBar />
+          <Dashboard />
       </>
   )
 }
