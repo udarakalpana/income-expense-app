@@ -31,4 +31,25 @@ final class AddIncomeTest extends TestCase
             'income_category' => $income['income_category'],
         ]);
     }
+
+    public function test_return_bad_response_if_not_existing_income_amount() {
+        $income = Income::factory()->make([
+            'income_amount' => 0,
+        ])->toArray();
+
+        $response = $this->post('/api/add-income', $income);
+
+        $response->assertStatus(200);
+        $response->assertJsonStructure([
+            'status',
+            'error'
+        ]);
+        $response->assertSimilarJson([
+            'status' => 422,
+            'error' => [
+                'income_amount' => ['The income amount field must be at least 1.'],
+            ]
+        ]);
+
+    }
 }
