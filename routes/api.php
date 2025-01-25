@@ -1,10 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IncomeController;
 
-Route::get('/test-api', function () {
-    return response()->json([
-        'test' => 'test content'
-    ]);
-});
+Route::post('add-income', [IncomeController::class, 'addIncome']);
+Route::get('get-incomes', [IncomeController::class, 'getIncomes']);
